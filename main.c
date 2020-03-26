@@ -11,22 +11,7 @@ pthread_cond_t  even  = PTHREAD_COND_INITIALIZER;
 pthread_cond_t  uneven = PTHREAD_COND_INITIALIZER;
 
 //1 3 5 7 9
-void* funA(void *arg)
-{
-    while(i <= COUNT)
-    {
-        pthread_mutex_lock(&mutex);
-        if(i % 2 != 0)
-        {
-            printf("pthread_A : %d\n",i);
-            ++i;
-            pthread_cond_signal(&uneven);
-        }
-        else
-            pthread_cond_wait(&even, &mutex);
-        pthread_mutex_unlock(&mutex);
-    }
-}
+
 //2 4 6 8 10
 void* funB(void *arg)
 {
