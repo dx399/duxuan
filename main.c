@@ -8,7 +8,7 @@ static  int   i = 1;
 
 pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 pthread_cond_t  even  = PTHREAD_COND_INITIALIZER;
-pthread_cond_t  uneven = PTHREAD_COND_INITIALIZER;
+
 
 //1 3 5 7 9
 
